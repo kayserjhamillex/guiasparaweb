@@ -1,0 +1,26 @@
+<mat-card class="card-color">
+  <mat-card-content>
+    <h4 class="titulo-pacientes">Módulo de Pacientes</h4>
+    <mat-tab-group class="content-color">
+      <mat-tab label="Tab 1">
+        <ng-template mat-tab-label>
+          <mat-icon class="icons">add_circle</mat-icon>
+          <span class="titulos-abas">Cadastro</span>
+        </ng-template>
+        <div class="demo-tab-content">
+          <app-cadastro></app-cadastro>
+        </div>
+      </mat-tab>
+      <mat-tab label="Tab 2">
+        <ng-template mat-tab-label>
+          <mat-icon class="icons">search</mat-icon>
+          <span class="titulos-abas">Pesquisa</span>
+        </ng-template>
+        <div class="demo-tab-content">
+          <br/>
+          <app-pesquisa></app-pesquisa>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>

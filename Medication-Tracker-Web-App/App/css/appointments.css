@@ -1,0 +1,27 @@
+.card, .card > * {
+  text-shadow: 0 !important;
+  font-weight: 0 !important;
+  color: black;
+}
+
+header {
+  margin: 1rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1rem;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  margin-left: 1rem;
+  padding: 0.25rem 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: rgba(96, 101, 109);
+  background-color: transparent;
+  border-bottom: 0.25rem solid transparent;
+}
+
+.masthead-brand {
+  margin-top: 0;
+}
+
+#create {
+  display: none;
+}

@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import 'variaveis';
+@import '../node_modules/font-awesome/scss/font-awesome';
+@import "~fullcalendar/dist/fullcalendar.css";
+$images: ('assets/background.jpg','assets/background1.jpg','assets/background2.jpg','assets/background3.jpg');
+
+$img: nth($images, random(length($images)));
+* {
+    margin:0;
+    padding:0;
+    list-style:none;
+    vertical-align:baseline;
+}
+body{
+    background-size:cover;
+    background-image: url($img);   
+    background-repeat: no-repeat; 
+    height: 100%;
+    position: relative;
+}
+
+/* material button toggle */
+.mat-button-toggle-label{
+    margin-top: 3px;
+}
+.mat-button-toggle-checked{
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    color: white;
+}
+
+@-webkit-keyframes fadeInLeft{
+    from{
+      -webkit-transform:translate3d(-100%,0,0);
+      transform:translate3d(-100%,0,0);
+    }
+    to{
+      -webkit-transform:translate3d(0,0,0);
+      transform:translate3d(0,0,0);
+    }
+  }
+  .fadeInLeft{
+    -webkit-animation-name:fadeInLeft;
+    animation-name:fadeInLeft;
+    animation-duration: 2s;
+  }
+  @-webkit-keyframes fadeInUp{
+    from{
+      -webkit-transform:translate3d(0,100%,0);
+      transform:translate3d(0,100%,0)}
+    to{
+      -webkit-transform:translate3d(0,0,0);
+      transform:translate3d(0,0,0)}
+  }
+
+  .fadeInUp{
+    -webkit-animation-name:fadeInUp;
+    animation-name:fadeInUp;
+    animation-duration: 2s;
+  }
+  .field-width{
+    width: 100% !important;
+  }

@@ -1,0 +1,46 @@
+<div>
+    <mat-toolbar color="primary" class="mat-toolbar">
+
+        <!--<div class="blacktbird-logo">
+        <a matTooltip="BlacktBird Luan Sousa" href="https://br.linkedin.com/in/luan2850">
+            <img src="./assets/blacktbird.png" onmouseover="this.src='./assets/blacktbird2.png';" onmouseout="this.src='./assets/blacktbird.png';">
+        </a>
+    </div>-->
+        <mat-toolbar-row>
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span class="espaco"></span>
+            <div class="imagem-tamanho"><i class="fa fa-user-md"></i></div>
+            <span class="titulo-nav">{{titulo}}</span>
+            <span class="btn-deslogar"></span>
+            <span class="usuario">Usuário: {{usuarioLogado}}</span>
+            <button mat-button class="btn-btn-deslogar" (click)="deslogar()">Sair</button>
+        </mat-toolbar-row>
+
+    </mat-toolbar>
+    <mat-sidenav-container class="mat-sidenav-container">
+        <mat-sidenav #sidenav mode="side" class="app-sidenav">
+            <mat-nav-list>
+                <a mat-list-item class="mat-list-item" (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </a>
+                <a mat-list-item class="mat-list-item" routerLink="">
+                    <mat-icon class="example-icon">dashboard</mat-icon>
+                    <span class="opcao">MENU</span>
+                </a>
+                <a mat-list-item class="mat-list-item" routerLink="inicio">
+                    <mat-icon class="example-icon">account_circle</mat-icon>
+                    <span class="opcao">Início</span>
+                </a>
+                <a mat-list-item class="mat-list-item" routerLink="pacientes">
+                    <mat-icon class="example-icon">extension</mat-icon>
+                    <span class="opcao">Paciente</span>
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+    </mat-sidenav-container>
+    <app-barra-central></app-barra-central>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+</div>
